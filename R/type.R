@@ -41,7 +41,8 @@ ignore_case <- function(x) isTRUE(attr(x, "ignore_case"))
 
 check_pattern <- function(x) {
   if (!is.character(x) || length(x) != 1) {
-    stop("`pattern` must be a single string", call. = FALSE)
+    # hadley says currently .arg and .code are the same
+    cli::cli_abort("{.arg pattern} must be a single string.")
   }
 
 }

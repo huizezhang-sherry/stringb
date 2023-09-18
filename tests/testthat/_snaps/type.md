@@ -2,20 +2,20 @@
 
     Code
       check_pattern(12312)
-    Error <simpleError>
-      `pattern` must be a single string
+    Error <rlang_error>
+      `pattern` must be a single string.
 
 ---
 
     Code
       check_pattern(c("sdkfjlsd", "sdfkjalsdf"))
-    Error <simpleError>
-      `pattern` must be a single string
+    Error <rlang_error>
+      `pattern` must be a single string.
 
 ---
 
     Code
       check_pattern(NA)
-    Error <simpleError>
-      `pattern` must be a single string
+    Error <rlang_error>
+      `pattern` must be a single string.
 

@@ -32,7 +32,7 @@ recycle <- function(x, to, arg = deparse(substitute(x))) {
   }
 
   if (length(x) != 1) {
-    stop("Can't recycle `", arg, "` to length ", length(to), ".", call. = FALSE)
+    cli::cli_abort("Can't recycle {arg} to length {length(to)}.")
   }
 
   rep(x, length(to))

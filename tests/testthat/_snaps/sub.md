@@ -2,6 +2,6 @@
 
     Code
       str_sub("a", 1:2)
-    Error <simpleError>
-      Can't recycle `start` to length 1.
+    Error <rlang_error>
+      Can't recycle start to length 1.
 
