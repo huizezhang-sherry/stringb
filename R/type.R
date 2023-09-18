@@ -44,7 +44,4 @@ check_pattern <- function(x) {
     stop("`pattern` must be a single string", call. = FALSE)
   }
 
-  if (is.na(x)) {
-    stop("`pattern` can't be NA", call. = FALSE)
-  }
 }

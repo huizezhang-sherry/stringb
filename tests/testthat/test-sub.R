@@ -8,7 +8,8 @@ test_that("start and end are recycled", {
   expect_equal(str_sub(character(), 1), character())
 
   # Can't recycle anything apart from length 1
-  expect_error(str_sub("a", 1:2), "`start`")
+  expect_snapshot(str_sub("a", 1:2), error = TRUE)
+
 })
 
 test_that("can pass start a matrix", {
