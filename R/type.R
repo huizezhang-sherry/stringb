@@ -39,10 +39,10 @@ is_perl <- function(x) inherits(x, "stringb_perl") || is.null(attr(x, "class"))
 ignore_case <- function(x) isTRUE(attr(x, "ignore_case"))
 
 
-check_pattern <- function(x) {
+check_pattern <- function(x, call = parent.frame()) {
   if (!is.character(x) || length(x) != 1) {
     # hadley says currently .arg and .code are the same
-    cli::cli_abort("{.arg pattern} must be a single string.")
+    cli::cli_abort("{.arg pattern} must be a single string.", call = call)
   }
 
 }

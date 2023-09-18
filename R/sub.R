@@ -26,13 +26,13 @@ str_sub <- function(string, start = 1L, end = -1L) {
   substr(string, start, end)
 }
 
-recycle <- function(x, to, arg = deparse(substitute(x))) {
+recycle <- function(x, to, arg = deparse(substitute(x)), call = parent.frame()) {
   if (length(x) == length(to)) {
     return(x)
   }
 
   if (length(x) != 1) {
-    cli::cli_abort("Can't recycle {arg} to length {length(to)}.")
+    cli::cli_abort("Can't recycle {arg} to length {length(to)}.", call = call)
   }
 
   rep(x, length(to))
